@@ -2,8 +2,10 @@
 # NMEA GPGGA Data Processor
 
 This project is a C++ application designed to read and process NMEA GPGGA sentences from a text file. The program extracts key information such as time, latitude, longitude, and the number of satellites from each GPGGA sentence and displays it in a readable format.
-![Alt text](image/1.png)
-![Alt text](image/2.png)
+
+
+![Alt text](Images/1.png)
+![Alt text](Images/2.png)
 
 ## Features
 
