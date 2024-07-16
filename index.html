@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>NMEA GPGGA Data Processor | NMEA-GPGGA-Data-Processor</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="NMEA GPGGA Data Processor" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This project is a C++ application that reads and processes NMEA GPGGA sentences from a text file. The program extracts useful information such as time, latitude, longitude, and the number of satellites in view from each GPGGA sentence. The extracted data is then displayed in a readable format." />
+<meta property="og:description" content="This project is a C++ application that reads and processes NMEA GPGGA sentences from a text file. The program extracts useful information such as time, latitude, longitude, and the number of satellites in view from each GPGGA sentence. The extracted data is then displayed in a readable format." />
+<link rel="canonical" href="https://esmail-sarhadi.github.io/NMEA-GPGGA-Data-Processor/" />
+<meta property="og:url" content="https://esmail-sarhadi.github.io/NMEA-GPGGA-Data-Processor/" />
+<meta property="og:site_name" content="NMEA-GPGGA-Data-Processor" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="NMEA GPGGA Data Processor" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"This project is a C++ application that reads and processes NMEA GPGGA sentences from a text file. The program extracts useful information such as time, latitude, longitude, and the number of satellites in view from each GPGGA sentence. The extracted data is then displayed in a readable format.","headline":"NMEA GPGGA Data Processor","name":"NMEA-GPGGA-Data-Processor","url":"https://esmail-sarhadi.github.io/NMEA-GPGGA-Data-Processor/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/NMEA-GPGGA-Data-Processor/assets/css/style.css?v=42bdc2364ba77d2ba644f824a5f23954e4eeb875">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/NMEA-GPGGA-Data-Processor/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://esmail-sarhadi.github.io/NMEA-GPGGA-Data-Processor/">NMEA-GPGGA-Data-Processor</a></h1>
+      
+
+      
+<h1 id="nmea-gpgga-data-processor">NMEA GPGGA Data Processor</h1>
+
+<p>This project is a C++ application designed to read and process NMEA GPGGA sentences from a text file. The program extracts key information such as time, latitude, longitude, and the number of satellites from each GPGGA sentence and displays it in a readable format.</p>
+
+<p><img src="/NMEA-GPGGA-Data-Processor/Images/1.png" alt="Alt text" />
+<img src="/NMEA-GPGGA-Data-Processor/Images/2.png" alt="Alt text" /></p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Parses NMEA GPGGA sentences.</li>
+  <li>Extracts and formats the time, latitude, longitude, and satellite count.</li>
+  <li>Reads from a specified text file containing NMEA messages.</li>
+  <li>Handles various edge cases and invalid data gracefully.</li>
+  <li>Outputs the extracted data in a human-readable format.</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>A C++11 compatible compiler (e.g., g++, clang++)</li>
+  <li>Basic knowledge of command-line operations</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+
+<ol>
+  <li><strong>Clone the repository</strong>:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/yourusername/nmea-gpgga-processor.git
+ <span class="nb">cd </span>nmea-gpgga-processor
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Prepare your data</strong>:
+    <ul>
+      <li>Ensure you have a text file (e.g., <code class="language-plaintext highlighter-rouge">nmea_messages.txt</code>) containing NMEA GPGGA sentences.</li>
+      <li>Place this file in the same directory as the source code.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="compilation">Compilation</h3>
+
+<p>To compile the program, use the following command:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-o</span> gpgga_processor main.cpp
+</code></pre></div></div>
+
+<h3 id="execution">Execution</h3>
+
+<p>To run the executable, use the following command:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./gpgga_processor
+</code></pre></div></div>
+
+<p>Ensure that the <code class="language-plaintext highlighter-rouge">nmea_messages.txt</code> file is in the same directory as the executable or specify the full path to the file in the source code.</p>
+
+<h2 id="example-output">Example Output</h2>
+
+<p>When you run the program, you will see output similar to the following if the input file contains valid GPGGA sentences:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Time: 12:34:56, Latitude: 4807.038 N, Longitude: 01131.000 E, Satellite Count: 8
+Time: 12:35:01, Latitude: 4807.123 N, Longitude: 01131.456 E, Satellite Count: 10
+</code></pre></div></div>
+
+<h2 id="code-overview">Code Overview</h2>
+
+<p>The main components of the project are:</p>
+
+<ul>
+  <li><strong>GPGGAData struct</strong>: A structure to hold the parsed GPGGA data fields.</li>
+  <li><strong>process_gpgga_line function</strong>: Parses a single GPGGA line and populates a GPGGAData object.</li>
+  <li><strong>read_and_process_file function</strong>: Reads the file line by line, processes each GPGGA line, and stores the results.</li>
+  <li><strong>main function</strong>: The entry point of the application, which handles file reading and data output.</li>
+</ul>
+
+<h2 id="error-handling">Error Handling</h2>
+
+<ul>
+  <li>The program checks if the file can be opened successfully.</li>
+  <li>It verifies that each line contains a valid GPGGA sentence before attempting to parse it.</li>
+  <li>If an error occurs during parsing, the program skips the invalid line and continues processing the next line.</li>
+</ul>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<ul>
+  <li>C++11 or later</li>
+</ul>
+
+<h2 id="license">License</h2>
+
+<p>This project is licensed under the MIT License. See the <a href="/NMEA-GPGGA-Data-Processor/LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.</p>
+
+<h2 id="profile">Profile</h2>
+
+<p>Check out my GitHub profile: <a href="https://github.com/Esmail-sarhadi" target="_blank">Esmail Sarhadi</a></p>
+
+<h2 id="project-link">Project Link</h2>
+
+<p>View this project on GitHub: <a href="https://github.com/Esmail-sarhadi/NMEA-GPGGA-Data-Processor" target="_blank">NMEA-GPGGA-Data-Processor</a></p>
+
+<h2 id="donation">Donation</h2>
+
+<p>If you find this project helpful, consider making a donation:</p>
+<p><a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" target="_blank">
+     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
+</a></p>
+<h2 id="contact">Contact</h2>
+
+<p>For any questions or suggestions, feel free to open an issue or contact me at [sarhadiesmail@gmail.com].</p>
+
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/Esmail-sarhadi/NMEA-GPGGA-Data-Processor/edit/main/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
